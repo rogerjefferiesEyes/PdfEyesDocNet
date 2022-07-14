@@ -1,6 +1,6 @@
 ﻿## PdfEyesDocNet
 
-This is a sample .NET/C# project for testing PDF files using [Applitools Eyes](https://applitools.com/blog/visual-testing/); an AI-powered Visual Testing Platform. All dependencies have permissive open source licensing (MIT or Apache 2.0), and are available via Nuget.
+This is a sample .NET/C# (NUnit3) project for testing PDF files using [Applitools Eyes](https://applitools.com/blog/visual-testing/); an AI-powered Visual Testing Platform. All dependencies have permissive open source licensing (MIT or Apache 2.0), and are available via Nuget.
 
 ### Dependencies
 **DocNet.Core** - PDF processing package which makes use of Google's Pdfium native/unmanaged library.
