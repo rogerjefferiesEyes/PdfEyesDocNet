@@ -6,7 +6,6 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using Applitools.Images;
 using Applitools.Utils.Geometry;
-using System;
 using System.IO;
 
 namespace PdfEyesDocNet
