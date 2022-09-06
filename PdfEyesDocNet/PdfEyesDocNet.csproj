@@ -21,8 +21,15 @@
     <None Remove="Eyes.Images" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".github\workflows\tests.yaml" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="workshop-info-anand-bagmar.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".github\" />
+    <Folder Include=".github\workflows\" />
   </ItemGroup>
 </Project>
