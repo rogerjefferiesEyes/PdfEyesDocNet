@@ -1,0 +1,36 @@
+﻿name: tests
+
+on:
+  push:
+    branches:
+      - '**'
+
+env: 
+  APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+  APPLITOOLS_BATCH_ID: ${{ github.sha }}
+  APPLITOOLS_SERVER_URL : "https://eyesapi.applitools.com"
+
+jobs:
+  run-tests:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+            dotnet-version: '3.1.x'
+
+      - name: Setup MSBuild Path
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Build
+        run:  msbuild.exe .\PdfEyesDocNet.sln
+
+      - name: Install NUnit.ConsoleRunner
+        run: nuget install NUnit.ConsoleRunner -Version 3.16.1 -DirectDownload -OutputDirectory .
+        
+      - name: Run UnitTests
+         run: ./NUnit.ConsoleRunner.3.16.1/tools/nunit3-console.exe  
+
