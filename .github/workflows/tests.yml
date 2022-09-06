@@ -32,5 +32,5 @@ jobs:
         run: nuget install NUnit.ConsoleRunner -Version 3.16.1 -DirectDownload -OutputDirectory .
         
       - name: Run UnitTests
-         run: ./NUnit.ConsoleRunner.3.16.1/tools/nunit3-console.exe  
+         run: ./NUnit.ConsoleRunner.3.16.1/tools/nunit3-console.exe  PdfEyesDocNet/bin/Debug/netcoreapp3.1/PdfEyesDocNet.dll
 
